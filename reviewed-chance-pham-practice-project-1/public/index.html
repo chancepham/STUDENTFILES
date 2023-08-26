@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.tlm.cloud/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="../src/style.css">
+  <title>Frontend Mentor | Pomodoro app</title>
+</head>
+<body class="text-center justify-content-center text-white" style="font-family: sans-serif">
+  
+  <section class="theWhole mt-4">
+    <h1>pomodoro</h1>
+    <div class="row text-center justify-content-center">
+      <div class="quickC d-flex mt-4">
+        <div class="col-4 selected eachOptionPreset" id="change25">
+          <a href="#" >
+            <h2>pomodoro</h2>
+          </a>
+          
+        </div>
+        <div class="col-4 eachOptionPreset" id="change5">
+          <a href="#" >
+            <h2>short break</h2>
+          </a>
+        </div>
+        <div class="col-4 eachOptionPreset" id="change15">
+          <a href="#" >
+            <h2>long break</h2>
+          </a>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    <div text-align="center">
+      <svg align="center" xmlns="http://www.w3.org/2000/svg" width="1000" height="750">
+        <circle 
+        
+        class="shadow" cx="50%" cy="50%" r="275" fill="#151932"/>
+        <circle style="stroke-dasharray: 1571 1571;stroke-dashoffset:1571; stroke-width: 10;  transform:rotate(270deg) translate(-877px,125px)" cx="50%" cy="50%" r="250" fill="#151932" id="circle"" />
+        
+      </svg>
+      <div id="root"></div>
+    </div>
+    
+    <a href="#" id="wrench" class="options aTarget1">
+      <img src="images/wrench.svg" height="50px" width="50px">
+    </a>
+    
+  </section>
+  
+  <script src="../src/index.js"></script>
+  <script src="http://static.tlmworks.org/track_1.0/cdns/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      ///////////////Animation STUFF//////////////////////////
+      ///////////////Animation STUFF//////////////////////////
+      ///////////////Animation STUFF//////////////////////////
+      ///////////////Animation STUFF//////////////////////////
+      $('.settingsModal').hide() //hide the settings modal
+      $(document.body).on("mouseover", ".aTarget1", function (e) { //animation for heartbeat on hover function
+        console.log('sssss')
+        $(this).addClass('heartBeat')
+      });
+      
+      $(document.body).on("mouseleave", ".aTarget1", function (e) { //animation for heartbeat on hover function
+        console.log('sssssdddd')
+        $(this).removeClass('heartBeat')
+      });
+      
+      
+      $('.options').bind("click", function () { // toggle modal visibility
+        $('.settingsModal').fadeToggle('slow')
+        
+        
+      });
+      $('#wrench').bind("click", function () { // toggle modal visibility
+        if(document.getElementById('toggleStart').textContent == 'p a u s e'){
+          document.querySelector('#toggleStart').click()
+        }
+        
+        
+      });
+      $('.fontChoice').bind("click", function () { // if clicked make selected font
+        $('.selectedFont').removeClass('selectedFont')
+        $(this).addClass('selectedFont')
+      });
+      $('.colorChoice').bind("click", function () { // if clicked make selected color
+        $('.selectedColor').removeClass('selectedColor')
+        $(this).addClass('selectedColor')
+      });
+      $('.xOut').bind("click", function () { // hide modal
+        $('.settingsModal').fadeToggle('slow')
+        
+      });
+      $('.applyBut').bind("click", function () { // applied settings hide the modal
+        $('.settingsModal').fadeToggle('slow')
+        
+      });
+      
+    });
+  </script>
+</body>
+</html>

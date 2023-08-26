@@ -1,0 +1,46 @@
+@media (min-width: 992px) { 
+    .masonry-grid{
+        position: relative; 
+        height: 1371.66px;
+    }
+    .mgmid{
+        position: absolute; 
+        left: 33.3333%; 
+        top: 384.938px;
+    }
+.mg1{
+    position: absolute; 
+    left: 0%; 
+    top: 0px;
+}
+.mg2{
+    position: absolute; 
+    left: 66.6667%; 
+    top: 0px;
+}
+.mg3{
+    position: absolute; 
+    left: 0%; 
+    top: 384.938px;
+}
+.mg4{
+    position: absolute; 
+    left: 66.6667%; 
+    top: 465.219px;
+}
+.mg5{
+    position: absolute; 
+    left: 33.3333%; 
+    top: 788.938px;
+}
+.mg6{
+    position: absolute; 
+    left: 0%; 
+    top: 826.157px;
+}
+.mg7{
+    position: absolute; 
+    left: 66.6667%; 
+    top: 930.438px;
+}
+}

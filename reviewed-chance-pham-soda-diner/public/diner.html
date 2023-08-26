@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Soda Diner: Diner</title>
+        <!-- Latest compiled and minified CSS & JS -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/soda.png" />
+        <link rel="stylesheet" href="https://cdn.tlm.cloud/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.tlm.cloud/fontawesome/5.15.2/css/all.css"
+            integrity="sha384-+2e4h68pmq1jygCMJInB7m4qQ8/KId/WkeL2Qcg3YjJqYqjtUV1hk6CZm3SM+I2V" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <a href="http://localhost:8081/">
+                    <img src="images/soda.png" class="logo">
+                </a>
+                <div id="navigation">
+                    <ul>
+                        <li><a href="http://localhost:8081/soda">All Sodas</a></li>
+                        <li><a href="http://localhost:8081/diner">All Diners</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <form id="dinerForm">
+
+                <!-- CREATE INPUT FOR CAR YEAR -->
+                <div class="form-group">
+                    <label for="name">Diner Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" required="">
+                </div>
+
+                <!-- CREATE INPUT FOR CAR MAKE -->
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" class="form-control" id="location" placeholder="Enter location" required="">
+                </div>
+
+    
+
+                <!-- CREATE SUBMIT BUTTON -->
+                <button type="submit" class="btn btn-default">Add a Diner</button>
+
+            </form>
+            <button id="allDiner" type="button" class="btn btn-default mt-3">
+                Diner
+            </button>
+            <div id="getResultDiv">
+                <ul class="list-group">
+                </ul>
+            </div>
+        </div>
+        <div class="position-absolute p-5" id="editModal">
+            <button id="exitModal" class="btn btn-default bg-danger text-white p-2 float-right">Exit</button>
+            <h1>Edit Options</h1>
+
+            <form id="dinerForm" class="mt-5">
+
+                <!-- CREATE INPUT FOR CAR YEAR -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control w-50 text-center" id="nameEdit" placeholder="Enter Name"
+                        required="">
+                </div>
+
+                <!-- CREATE INPUT FOR CAR MAKE -->
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" class="form-control w-50 text-center" id="locationEdit"
+                        placeholder="Enter location" required="">
+                </div>
+
+                <!-- CREATE INPUT FOR CAR MODAL -->
+                <div class="form-group">
+                    <label for="exampleSelect2">Soda's That Can Be Served</label>
+                    <select multiple="" class="form-control rounded-0" id="possibleServingSoda">
+                        <!-- <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option> -->
+                    </select>
+                </div>
+
+
+                <!-- CREATE SUBMIT BUTTON -->
+                <button class="btn btn-default bg-dark text-white editDiner" id="editDinerId">Edit Diner</button>
+
+            </form>
+        </div>
+        <script src="https://cdn.tlm.cloud/jquery/3.3.1/jquery-3.3.1.min.js"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.tlm.cloud/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+
+        <script src="javascript/dinerApi.js"></script>
+
+    </body>
+
+</html>
